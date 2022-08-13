@@ -7,6 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 email:- abc@gmail.com
 pass:- admin123
 
+## Live Server
+
+https://rishit-movie-list-assignment.herokuapp.com/login
+
 ## Assumptions
 
  1) Initial Sorting as Popularity Descending.
