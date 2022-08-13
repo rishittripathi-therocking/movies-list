@@ -1,0 +1,46 @@
+<div class="header">
+    <form id="form">
+      <input [(ngModel)]="searchKey" type="text" name="search" class="search" placeholder="Search">
+      <button class="button warning" (click)="searchMovies()">Search</button>
+      <button class="button info" (click)="logout()">Logout</button>
+    </form>
+</div>
+<div class="movie-header">
+    <h3>Popular Movies</h3>
+    <div class="sort-by">
+        <label>Sort By</label>
+        <ng-select placeholder="Sort" (change)="sortMovies()" [(ngModel)]="sort_by">
+            <ng-option value="popularity.asc">Popularity Ascending</ng-option>
+            <ng-option value="popularity.desc">Popularity Descending</ng-option>
+            <ng-option value="release_date.asc">Realease Date Ascending</ng-option>
+            <ng-option value="release_date.desc">Realease Date Descending</ng-option>
+            <ng-option value="original_title.asc">Title Ascending</ng-option>
+            <ng-option value="original_title.desc">Title Descending</ng-option>
+        </ng-select>
+    </div>
+</div>
+<main id="main" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="1000" (scrolled)="onScroll()"> 
+    <div *ngFor="let movie of moviesList">
+        <div class="movie">
+            <img src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" alt="{{movie.title}}">
+            <div class="movie-info">
+                <h3>{{movie.original_title}}</h3>
+                <p>Popularity: {{movie.popularity}}</p>
+                <p>Vote Count: {{movie.vote_count}}</p>
+            </div>
+            <hr>
+            <div class="movie-footer">
+                 <p>{{movie.release_date}}</p>
+                 <div class="rating">
+                    <span class="material-symbols-outlined">star</span>
+                    <p>{{movie.vote_average}}</p>
+                 </div>
+                 <div class="overview">
+                    <h3>Overview</h3>
+                    {{movie.overview}}
+                 </div>
+                
+            </div>
+        </div>
+    </div>
+</main>

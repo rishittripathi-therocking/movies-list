@@ -1,0 +1,18 @@
+<div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="#">Sign In</a></p>
+      </form>
+      <form class="login-form" [formGroup]="loginForm">
+        <input type="text" placeholder="username" formControlName="email" (input)="onChange()"/>
+        <input type="password" placeholder="password" formControlName="password" (input)="onChange()"/>
+        <button [disabled]="loginForm.invalid" (click)="loginData()">login</button>
+        <p class="errorMessage" *ngIf="showError">Incorrect Email or password Provided</p>
+        <!-- <p class="message">Not registered? <a href="#">Create an account</a></p> -->
+      </form>
+    </div>
+</div>

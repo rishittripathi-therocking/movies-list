@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #373b69;
+}
+
+.search {
+  height: 33px;
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #7378c5;
+}
+
+.search:focus {
+  outline: none;
+  background-color: #22254b;
+}
+
+.button {
+  border: 2px solid black;
+  background-color: white;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.info {
+  border-color: greenyellow;
+  color: green;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.info:hover {
+    background: green;
+    color: white;
+}
+
+.warning {
+  border-color: #ff9800;
+  color: orange;
+}
+  
+.warning:hover {
+    background: #ff9800;
+    color: white;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  height: fit-content;
+  background-color: #fff;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.movie img {
+  width: 100%;
+  height: fit-content;
+}
+
+.movie-header {
+    color: orange;
+    display: flex;
+    justify-content: space-around;
+    gap:0.2rem;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-header .sort-by {
+    display: flex;
+    width: 30%;
+    color: #000 !important;
+    gap:0.2rem;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-header .sort-by ng-select {
+    width: 100%;
+}
+
+.movie-info {
+  color: #000;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info p {
+    font-size: small;
+    color: grey;
+}
+
+.movie-footer {
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-footer .rating{
+    display: flex;
+}
+
+.movie-footer .rating span {
+    padding-top: 10px;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
