@@ -1,6 +1,9 @@
 # MovieList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+Default Login
+email:- abc@gmail.com
+pass:- admin123
 
 ## Assumptions
 
