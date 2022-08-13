@@ -44,6 +44,7 @@ export class MoviesComponent implements OnInit {
     this.moviesList = [];
     this.totalPages = 0;
     this.currentPage = 1;
+    this.searchKey = null;
     this.getMoviesList(this.url);
   }
 
